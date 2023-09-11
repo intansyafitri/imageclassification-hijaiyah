@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Batik Identifier Start -->
+<section id="hijaiyahclassifier">
+    <div style="margin: 0; padding: 0; background: url('static/img/bg-body.jpg') no-repeat center center fixed; 
+        background-attachment: fixed; background-size: cover;">
+        <div style="text-align: center;" class="container" data-aos="fade-up"><br><br><br><br><br><br><br>
+            <img width="400" height="400" src="static\img\cute.png" alt="...">
+            <p style="font-family: fantasy; font-size: 40px; color: lightpink;">Upload image for classification</p>
+            <hr style="margin-top: 30px";><br>
+            <div class="content mt-3">
+                    <div class="header-container1" style="text-align: center;">
+                        <form action="/submit" method="POST" enctype=multipart/form-data> 
+                            <!-- <div style="width: 300px; height: 22px; background-color:#F195B2; 
+                            border-radius: 50px; color: white; padding: 20px 0;"> -->
+                            <input type=file name=file>
+                            <input type=submit class="btn btn-primary" value=Predict>
+                        </form>
+                    </div>
+            </div> 
+        </div>><br><br><br><br><br><br><br>
+    </div>
+</section>
+<!-- Batik Identifier End -->
+
+{% include 'section/hijaiyahbasics.html' %}
+{% include 'section/tajwidbasics.html' %}
+
+{% endblock content %}
